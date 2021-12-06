@@ -11,10 +11,10 @@ The top ranked model, with a score of -118.456660, was RandomForestMSE_BAG_L1.
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
 My first step was to just consider what factors are likely to have an impact on bike usage. 
-The most obvious factors is the time of day, day of week, and possibly the month. 
+The most obvious being the time of day, day of week, and possibly the month. 
 Subsequently I conducted some analysis using shapely values (https://towardsdatascience.com/tagged/shapley-values?p=8c4a2bc11c2a), this can be seen in the appendix of the bike sharing notebook.
 
-The analysis supported the intuition that hour as an important feature, in fact probably the most important feature.
+The analysis supported the intuition that hour is an important feature, in fact probably the most important feature.
 
 ![shap_summary.png](https://raw.githubusercontent.com/markmelling/bike_sharing/main/img/shap_summary.png)
 
@@ -24,8 +24,7 @@ The model performed significantly better. The best model was a WeightedEnsemble_
 
 #### The leaderboard
  |pos|model|score_val|pred_time_val|fit_time|
- |--|--|--|--|--|
- 
+ |---|---|---|---|---| 
  |0|      WeightedEnsemble_L3|  -32.323917|       6.760135|  512.133244|   
  |1|      WeightedEnsemble_L2|  -32.410403|       4.290395|  170.613109|   
  |2|     ExtraTreesMSE_BAG_L2|  -32.723657|       5.997226|  344.214564|   
@@ -57,7 +56,7 @@ Spending more time on featuring engineering looks like the best place to spend m
 ### A table with the models run, the hyperparameters modified, and the kaggle score.
 
 |model|eval_metric|presets|training_time||score|
-|--|--|--|--|--|
+|---|---|---|---|---|
 |initial|root_mean_squared_error|best_quality|600|1.37974|
 |add_features|root_mean_squared_error|best_quality|600|0.45910|
 |hpo1|mean_absolute_error|best_quality|600|0.46934|

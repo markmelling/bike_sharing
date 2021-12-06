@@ -45,7 +45,7 @@ The model performed significantly better. The best model was a WeightedEnsemble_
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-I experimented with using different hyper-paremeters for autogluon itself and specific models, but largely was not able to improve on autogluons choice of parameters.
+I experimented with using different hyper-paremeters for Autogluon itself and specific models, but largely was not able to improve on autogluons choice of parameters.
 Where I did discover some variation in performance was different choice of both eval_metric and training time. See table below.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?

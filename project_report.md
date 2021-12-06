@@ -59,10 +59,12 @@ Spending more time on featuring engineering looks like the best place to spend m
 |---|---|---|---|---|
 |initial|root_mean_squared_error|best_quality|600|1.37974|
 |add_features|root_mean_squared_error|best_quality|600|0.45910|
+|drop_holiday_season|root_mean_squared_error|best_quality|600|0.46170|
 |hpo1|mean_absolute_error|best_quality|600|0.46934|
 |hpo2|root_mean_squared_error|best_quality|600|0.51804|
 |hpo3|r2|best_quality|600|0.51596|
-|hpo4|mean_absolute_error|best_quality|3600|0.45688|
+|long_training|mean_absolute_error|best_quality|3600|0.45688|
+|NN_500_epochs|mean_absolute_error|best_quality|14,400|0.45053|
 
 
 ### A line plot showing the top model score for the three (or more) training runs during the project.
@@ -74,7 +76,7 @@ Spending more time on featuring engineering looks like the best place to spend m
 ![model_test_score.png](https://raw.githubusercontent.com/markmelling/bike_sharing/main/img/model_test_score.png)
 
 ## Summary
-Spending time to understand the data and determine which new features can be created and possibly those that could be dropped is an effective way of significantly improving the models.
+Spending time to understand the data and determine which new features can be created. I have already dropped 'season' and 'holiday' as the two least important features, this gave a marginally worse score.
 
-Largely speaking Autogluon does a pretty good job of model and hyperparmeter selection.
+Largely speaking Autogluon does a pretty good job of model and hyperparmeter selection, although the neural network model shows some promise and may merit some further hyperparameter tuning and even longer training times. 
 
